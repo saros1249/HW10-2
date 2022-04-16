@@ -9,9 +9,9 @@ def page_index():
     return render_template('page_index.html', candidates=candidates())
 
 
-@app.route("/candidates/<int:x>")
-def page_candidates(x):
-    return render_template('page_candidates.html', candidate=candidates()[x-1])
+@app.route("/candidates/<int:id>")
+def page_candidates(id):
+    return render_template('page_candidates.html', candidate=candidates()[id-1])
 
 
 @app.route("/skills/<skill>")
