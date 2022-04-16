@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Skills page</title>
+  </head>
+  <body>
+    {% for candidate in candidates %}
+        {% if skill in candidate.skills.lower().split(', ') %}
+            <h1>Имя кандидата - {{candidate.name}}</h1>
+            <p>Позиция кандидата - {{candidate.position}}</p>
+            <p>Навыки - {{candidate.skills}}</p>
+        {% endif %}
+    {% endfor %}
+  </body>
+</html>
